@@ -1,6 +1,6 @@
-# Advanced Movie Database Management System 
+## Advanced Shopping Mall Database Management System 
 
-Group Name: MovieMatrix 
+Group Name: SMasters 
 
 Group Members: 
 Ahmet Faruk Sevim 211101029 
