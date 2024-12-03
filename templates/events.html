@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Etkinlikler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>Etkinlikler</h1>
+        <div class="button-container">
+            <button onclick="window.history.back()" class="btn btn-primary">Geri Dön</button>
+        </div>
+        <ul class="event-list">
+            {% for event in events %}
+                <li class="event-item">
+                    <h2>{{ event.Name }}</h2>
+                    <p><strong>Tarih:</strong> {{ event.Date }}</p>
+                    <p><strong>Açıklama:</strong> {{ event.Description }}</p>
+                    <p><strong>Organizatör:</strong> {{ event.OrganizerInfo }}</p>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

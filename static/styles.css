@@ -1,0 +1,373 @@
+/* Genel Ayarlar */
+body {
+    font-family: 'Roboto', sans-serif;
+    background-color: #f4f7fa;
+    color: #333;
+    margin: 0;
+    padding: 0;
+}
+
+/* Kapsayıcı */
+.container {
+    max-width: 900px;
+    margin: 50px auto;
+    padding: 20px;
+}
+
+/* Başlıklar */
+h1, h2 {
+    text-align: center;
+    font-weight: 700;
+    color: #2c3e50;
+    margin-bottom: 30px;
+}
+
+/* Şehir Seçimi ve AVM Listesi */
+.city-selection {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+.city-selection select {
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    outline: none;
+    transition: all 0.3s ease-in-out;
+}
+
+.city-selection select:hover,
+.city-selection select:focus {
+    border-color: #3498db;
+}
+
+.mall-list ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.mall-list li {
+    padding: 15px 25px;
+    margin: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.mall-list li:hover {
+    background: #e8f4fa;
+    transform: translateY(-2px);
+}
+
+/* Buton Tasarımı */
+.button-container {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 20px;
+}
+
+.btn {
+    padding: 15px 20px;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+}
+
+.btn-primary {
+    background-color: #3498db;
+    color: #fff;
+}
+
+.btn-secondary {
+    background-color: #27ae60;
+    color: #fff;
+}
+
+.btn-tertiary {
+    background-color: #e67e22;
+    color: #fff;
+}
+
+.btn:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+/* Park Yeri Listesi */
+.parking-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.parking-item {
+    padding: 15px 20px;
+    margin: 10px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    width: 200px;
+}
+
+.parking-item:hover {
+    background: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+/* Mağaza Listesi */
+/* Mağaza Listesi */
+.store-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.store-item {
+    padding: 15px 20px;
+    margin: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-align: center;
+    width: 300px;
+}
+
+.store-item:hover {
+    background: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+/* Promosyon Listesi */
+.promotion-list {
+    list-style-type: none;
+    padding: 0;
+    margin-top: 10px;
+}
+
+.promotion-item {
+    padding: 10px;
+    margin-bottom: 5px;
+    background: #e3f2fd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    font-weight: normal;
+    text-align: left;
+}
+
+/* Kayıp Eşyalar Butonu */
+.btn-lost {
+    background-color: #d35400;
+    color: #fff;
+}
+
+.btn-lost:hover {
+    background-color: #e67e22;
+    transform: translateY(-2px);
+    opacity: 0.9;
+}
+
+/* Kayıp Eşyalar Listesi */
+.lost-items-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.lost-item {
+    padding: 15px 20px;
+    margin: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    font-weight: bold;
+    transition: all 0.3s ease-in-out;
+    text-align: left;
+    width: 300px;
+}
+
+.lost-item:hover {
+    background: #f9f9f9;
+    transform: translateY(-2px);
+}
+/* Etkinlik Listesi */
+.event-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 20px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.event-item {
+    padding: 15px 20px;
+    margin: 15px;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease-in-out;
+    width: 300px;
+    text-align: left;
+}
+
+.event-item:hover {
+    background: #f9f9f9;
+    transform: translateY(-2px);
+}
+
+.event-item h2 {
+    font-size: 20px;
+    color: #3498db;
+    margin-bottom: 10px;
+}
+
+.event-item p {
+    margin: 5px 0;
+    color: #555;
+    font-size: 14px;
+}
+
+/* Geri Dön Butonu */
+.button-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.btn-primary {
+    padding: 10px 20px;
+    background-color: #3498db;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: all 0.3s ease-in-out;
+}
+
+.btn-primary:hover {
+    background-color: #2980b9;
+    transform: translateY(-2px);
+}
+
+
+
+/* Yorumlar Bölümü */
+.reviews-section {
+    background-color: #ffffff; /* Beyaz arka plan */
+    border-radius: 8px; /* Köşeleri yuvarla */
+    padding: 20px; /* İçerik boşluğu */
+    margin-bottom: 20px; /* Alt boşluk */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Hafif gölge */
+    transition: all 0.3s ease; /* Hover için yumuşak geçiş efekti */
+}
+
+.reviews-section:hover {
+    transform: translateY(-3px); /* Hover'da yukarı kalkma efekti */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15); /* Daha belirgin gölge */
+}
+
+.review-list {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.review-item {
+    padding: 15px;
+    margin-bottom: 15px;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.review-item:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.15);
+}
+
+.review-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.review-header strong {
+    font-size: 18px;
+    color: #2c3e50;
+}
+
+.review-rating {
+    font-size: 16px;
+    color: #27ae60;
+    font-weight: bold;
+}
+
+.review-comment {
+    font-style: italic;
+    color: #555;
+    margin: 10px 0;
+}
+
+.review-date {
+    font-size: 12px;
+    color: #999;
+}
+
+.search-container {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+#store-search {
+    width: 80%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.search-container button {
+    margin-left: 10px;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+    border: none;
+    background-color: #3498db;
+    color: white;
+    cursor: pointer;
+}
+
+.search-container button:hover {
+    background-color: #2980b9;
+}

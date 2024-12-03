@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kayıp Eşyalar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>Kayıp Eşyalar</h1>
+        <div class="button-container">
+            <button onclick="window.history.back()" class="btn btn-primary">Geri Dön</button>
+        </div>
+        <ul class="lost-items-list">
+            {% for item in lost_items %}
+                <li class="lost-item">
+                    <strong>Açıklama:</strong> {{ item.Description }}<br>
+                    <strong>Bulunduğu Tarih:</strong> {{ item.DateFound }}<br>
+                    <strong>Bulunduğu Yer:</strong> {{ item.LocationFound }}<br>
+                    <strong>Durum:</strong> {{ "Sahibi Tarafından Alındı" if item.ClaimedStatus else "Sahibini Bekliyor" }}<br>
+                
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

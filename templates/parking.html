@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Otopark Bilgileri</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>Otopark Bilgileri</h1>
+        <div class="button-container">
+            <button onclick="window.history.back()" class="btn btn-primary">Geri Dön</button>
+        </div>
+        <h3>Otopark Doluluk Oranı: {{ occupancy_rate }}%</h3>
+
+        <ul class="parking-list">
+            {% for spot in parking_spots %}
+                <li class="parking-item">
+                   
+                    <strong>Durum:</strong> {{ "Müsait" if spot.AvailabilityStatus else "Dolu" }}<br>
+                    <strong>Yer:</strong> {{ spot.Location }}
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

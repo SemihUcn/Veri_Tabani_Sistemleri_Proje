@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AVM Yönetim Sistemi</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>AVM Yönetim Sistemi</h1>
+        <div class="city-selection card">
+            <select id="city-select" class="select-box">
+                <option value="" disabled selected>Bir şehir seçiniz</option>
+            </select>
+        </div>
+        <div id="mall-list" class="mall-list card"></div>
+        <div id="mall-details" class="mall-details card"></div>
+    </div>
+
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+</html>

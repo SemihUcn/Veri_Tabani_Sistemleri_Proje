@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mağazalar ve Promosyonlar</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>Mağazalar ve Promosyonlar</h1>
+<div class="button-container">
+    <button onclick="window.history.back()" class="btn btn-primary">Geri Dön</button>
+</div>
+<div class="search-container">
+    <input type="text" id="store-search" placeholder="Mağaza adı girin..." class="search-box">
+    <button onclick="filterStores()" class="btn btn-primary">Ara</button>
+</div>
+<div class="total-customers">
+    <p><strong>Toplam Müşteri Sayısı:</strong> {{ total_customers }}</p>
+</div>
+        <ul class="store-list">
+            {% for store in stores %}
+            <li class="store-item">
+                <a href="/store_details/{{ store.StoreID }}"><strong>{{ store.Name }}</strong></a><br>
+                Konum: {{ store.Location }}<br>
+                Çalışma Saatleri: {{ store.OpeningHours }}<br>
+                İletişim: {{ store.ContactInfo }}<br>
+                <p><strong>Müşteri Sayısı:</strong> {{ store.CustomerCount }}</p>
+                <h4>Promosyonlar:</h4>
+                {% if store.promotions %}
+                    <ul class="promotion-list">
+                        {% for promo in store.promotions %}
+                            <li class="promotion-item">
+                                <strong>İndirim Detayları:</strong> {{ promo.DiscountDetails }}<br>
+                                <strong>Başlangıç Tarihi:</strong> {{ promo.StartDate }}<br>
+                                <strong>Bitiş Tarihi:</strong> {{ promo.EndDate }}
+                            </li>
+                        {% endfor %}
+                    </ul>
+                {% else %}
+                    <p>Bu mağazada şu an promosyon bulunmamaktadır.</p>
+                {% endif %}
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
+    <script src="{{ url_for('static', filename='app.js') }}"></script>
+</body>
+
+</html>

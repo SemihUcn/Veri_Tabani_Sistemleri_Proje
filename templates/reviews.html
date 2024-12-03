@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ store.Name }} Yorumları</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div id="app" class="container">
+        <h1>{{ store.Name }} Müşteri Yorumları</h1>
+        <div class="button-container">
+            <button onclick="window.history.back()" class="btn btn-primary">Geri Dön</button>
+        </div>
+        
+        <!-- Yorumlar -->
+        <div class="reviews-section card">
+            <h2>Yorumlar</h2>
+            {% if reviews %}
+                <ul class="review-list">
+                    {% for review in reviews %}
+                        <li class="review-item">
+                            <div class="review-header">
+                                <span class="review-rating">{{ review.Rating }}/5</span>
+                            </div>
+                            <p class="review-comment">"{{ review.ReviewText }}"</p>
+                            <small class="review-date">{{ review.Timestamp }}</small>
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% else %}
+                <p>Bu mağazaya ait henüz yorum bulunmamaktadır.</p>
+            {% endif %}
+        </div>
+    </div>
+</body>
+</html>
